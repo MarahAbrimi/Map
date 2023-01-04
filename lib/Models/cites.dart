@@ -1,7 +1,12 @@
- import 'dart:convert';
-
+import 'package:map/helper/exported_packages.dart';
 
 class Cites {
+    final String name;
+    final double latitude;
+    final double longitude;
+    final String country;
+    final String state;
+
     Cites({
         required this.name,
         required this.latitude,
@@ -9,12 +14,6 @@ class Cites {
         required this.country,
         required this.state,
     });
-
-    final String name;
-    final double latitude;
-    final double longitude;
-    final String country;
-    final String state;
 
     factory Cites.fromJson(Map<String, dynamic> json) => Cites(
         name: json["name"],
